@@ -1,0 +1,157 @@
+/* 1. Variables de Marca */
+:root {
+  --primary: #e67e22;
+  --primary-hover: #d35400;
+  --dark: #2c3e50;
+  --light-bg: #f4f7f6;
+  --white: #ffffff;
+  --border: #dddddd;
+  --text: #333333;
+  --danger: #e74c3c;
+}
+
+/* 2. Reset y Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text);
+}
+
+/* 3. Estilos de Tablas (CRUD) */
+.table-container {
+  overflow-x: auto; /* Permite scroll horizontal en móviles */
+  margin-top: 20px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Evita que se amontone el texto */
+}
+
+th {
+  background-color: var(--dark);
+  color: white;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* 4. Estilos de Formularios */
+.form-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 550px;
+  margin: 20px auto;
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.1);
+}
+
+/* 5. Botones */
+.btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+}
+
+.btn-danger:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+/* 6. Utilidades de Filtros y Buscador */
+.filters-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.select-filter {
+  width: auto;
+  min-width: 180px;
+}
+
+/* 7. Responsive */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 20px;
+  }
+  
+  .filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
